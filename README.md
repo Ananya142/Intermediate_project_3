@@ -1,0 +1,39 @@
+**Overview**
+ This project involves creating a basic ERC20 token named MyToken (MTK) by utilizing the OpenZeppelin library. The smart contract allows for minting and burning tokens, with only the contract owner having access control.
+
+**Features**
+
+**1. Importing ERC20 Standard** 
+
+This token is built on OpenZeppelin's ERC20 contract, guaranteeing that it meets the requirements of the ERC20 standard. It can seamlessly work with Ethereum applications, wallets, and exchanges that are compatible with ERC20 tokens.
+
+**2. Minting token** 
+
+**- Function** The mint(address to, uint256 amount) function allows the contract owner to mint new tokens to the specific address.
+
+**- Parameters:**
+
+to: The address to which new tokens will be minted.
+
+amount: The number of tokens to be minted.
+
+**3. Burning token**
+
+**- Function** The burn(address from, uint256 amount) function allows the contract owner to burn (destroy) existing tokens from the specified from address.
+
+**- Parameters:**
+
+from: The address from which tokens will be burned.
+
+amount: The number of tokens to be burned.
+
+**4. Constructor function** 
+
+1. The constructor function runs during contract deployment, setting the token's name ("MyToken") and symbol ("MTK") with ERC20 constructor arguments. Additionally, it assigns the owner variable to the deploying address.
+
+
+**Code**
+
+**Usage**
+
+To compile the contract, go to the "Solidity Compiler" tab in Remix IDE and select the appropriate compiler version, such as 0.8.26. Click on "Compile MyToken.sol" to compile the contract. Then, switch to the "Deploy & Run Transactions" tab to deploy the compiled contract. Once deployed, the contract owner can use the mint function to mint new tokens to a specified address and increase the total supply of tokens. Similarly, the owner can use the burn function to burn tokens from a specified address and decrease the total supply of tokens.
