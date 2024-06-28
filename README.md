@@ -39,7 +39,35 @@ The constructor function runs during contract deployment, setting the token's na
 
 
 **Code**
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.26;
 
+// Import the ERC20 contract from OpenZeppelin
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol";
+
+// Define the MyToken contract inheriting from ERC20
+contract MyToken is ERC20 {
+    address public owner; 
+
+    //created a Constructor function to initialize the ERC20 token 
+    constructor() ERC20("MyToken", "MTK") {
+        owner = msg.sender; 
+    }
+
+    // Function to mint tokens to a specified address 
+    function mint(address to, uint256 amount) public {
+        require(msg.sender == owner, "Only owner can mint"); 
+        _mint(to, amount); 
+    }
+
+    // Function to burn tokens from a specified address
+    function burn(address from, uint256 amount) public {
+        require(msg.sender == owner, "Only owner can burn"); 
+        _burn(from, amount); 
+    }
+}
+```
 **Usage**
 
 To compile the contract, go to the "Solidity Compiler" tab in Remix IDE and select the appropriate compiler version, such as 0.8.26. Click on "Compile MyToken.sol" to compile the contract. Then, switch to the "Deploy & Run Transactions" tab to deploy the compiled contract. Once deployed, the contract owner can use the mint function to mint new tokens to a specified address and increase the total supply of tokens. Similarly, the owner can use the burn function to burn tokens from a specified address and decrease the total supply of tokens.
