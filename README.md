@@ -1,17 +1,15 @@
-**Project Title**
-
-ERC20 Token
+**ERC20 Token**
 
 **Description**
 
-This project involves creating a basic ERC20 token named MyToken (MTK) by utilizing the OpenZeppelin library. The smart contract allows for minting and burning tokens, with only the contract owner having access control.
+This program is a simple contract written in Solidity, a programming language used for developing smart contracts on the Ethereum blockchain. It extends the functionality of the widely used ERC20 token standard provided by OpenZeppelin. The purpose of this contract is to create a new ERC20 token named "MyToken" with the symbol "MTK." This token includes additional functionalities for minting and burning tokens, which can only be executed by the contract owner.
 
 **Prerequisites**
 
 - Solidity version: ^0.8.26
 - OpenZeppelin Contracts: ERC20
 
-  **Getting Started**
+ **Getting Started**
 
 **1. Importing ERC20 Standard** 
 
@@ -33,7 +31,7 @@ The constructor function runs during contract deployment, setting the token's na
 
 To run this program, I use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
 
-Once I am on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., ERC20token.sol). Paste the following code into the file
+Once I am on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., MyToken.sol). Paste the following code into the file
 
 **Code**
 ```
@@ -67,7 +65,7 @@ contract MyToken is ERC20 {
 ```
 
 
-To compile the contract, go to the "Solidity Compiler" tab in Remix IDE and select the appropriate compiler version, such as 0.8.26. Click on "Compile ERC20token.sol" to compile the contract. Once the code is compiled then, switch to the "Deploy & Run Transactions" tab to deploy the compiled contract. Once the contract is deployed, I interact with it by using the functions. 
+To compile the contract, go to the "Solidity Compiler" tab in Remix IDE and select the appropriate compiler version, such as 0.8.26. Click on "Compile MyToken.sol" to compile the contract. Once the code is compiled then, switch to the "Deploy & Run Transactions" tab to deploy the compiled contract. Once the contract is deployed, I interact with it by using the functions. 
 Firstly I use the mint function to mint new tokens to a specified address and increase the total supply of tokens. Similarly, I use the burn function to burn tokens from a specified address and decrease the total supply of tokens.
 
 **License** This project is licensed under the MIT License.
