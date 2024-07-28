@@ -33,9 +33,16 @@ Standard ERC20 transfer functionality, allowing token transfers between addresse
 
 **Executing program**
 
-To run this program, I use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
+- **Go to the Remix website**:
+  - Open your web browser and navigate to [Remix](https://remix.ethereum.org/).
 
-Once I am on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., MyToken.sol). Paste the following code into the file
+- **Create a new file**:
+  - Click on the "+" icon located in the left-hand sidebar.
+  - A new file dialog will appear; name the file with a `.sol` extension (e.g., `MyToken.sol`).
+
+- **Paste the following code into the file**:
+  - Open the newly created `MyToken.sol` file.
+  - Paste the Solidity code into the file editor.
 
 **Code**
 ```
@@ -82,7 +89,40 @@ contract MyToken is ERC20 {
 ```
 
 
-To compile the contract, go to the "Solidity Compiler" tab in Remix IDE and select the appropriate compiler version, such as 0.8.26. Click on "Compile MyToken.sol" to compile the contract. Once the code is compiled then, switch to the "Deploy & Run Transactions" tab to deploy the compiled contract. Once the contract is deployed, I interact with it by using the functions. 
-Firstly I use the mint function to mint new tokens to a specified address and increase the total supply of tokens. Similarly, I use the burn function to burn tokens from a specified address and decrease the total supply of tokens.
+- **Compile the contract**:
+  - Navigate to the "Solidity Compiler" tab in the Remix IDE (usually represented by a gavel icon).
+  - Select the appropriate compiler version from the dropdown menu (e.g., `0.8.26`).
+    - If you don’t see the desired version, click on the "Load Compiler" button to find more versions.
+  - After selecting the correct version, click on the "Compile `MyToken.sol`" button.
+    - Ensure there are no errors in the code. If there are, fix them and recompile.
+
+- **Deploy the compiled contract**:
+  - Switch to the "Deploy & Run Transactions" tab (represented by a rocket icon).
+  - In the "Environment" dropdown, select the desired environment.
+  - Make sure your contract (`MyToken`) is selected in the "Contract" dropdown.
+  - Click on the "Deploy" button to deploy the contract.
+  - Wait for the deployment to complete. You should see your deployed contract under the "Deployed Contracts" section.
+
+- **Interact with the deployed contract**:
+  - **Mint new tokens**:
+    - In the "Deployed Contracts" section, expand your deployed contract to see the available functions.
+    - Locate the `mint` function.
+    - Enter the recipient’s address and the amount of tokens to mint in the provided input fields.
+    - Click on the `mint` button to execute the function. This will mint new tokens to the specified address and increase the total supply.
+  - **Burn tokens**:
+    - Locate the `burn` function in the list of available functions.
+    - Enter the address from which tokens will be burned and the amount of tokens to burn in the provided input fields.
+    - Click on the `burn` button to execute the function. This will burn the specified amount of tokens from the given address and decrease the total supply.
+      
+   - **Transfer tokens**:
+     - address recipient: The address of the recipient to whom the tokens are being transferred.
+     - uint256 amount: The amount of tokens to be transferred.
+     - public: The function can be called by any external account or contract.
+     - override: This function overrides the transfer function in the inherited ERC20 contract.
+     - returns (bool): The function returns a boolean value indicating whether the transfer was successful.
+
+- **Verify the results**:
+  - Use the `totalSupply` function to check the total supply of tokens.
+  - Use the `balanceOf` function to verify the balances of different addresses.
 
 **License** This project is licensed under the MIT License.
