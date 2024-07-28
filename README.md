@@ -27,6 +27,10 @@ This token is built on OpenZeppelin's ERC20 contract, guaranteeing that it meets
 
 The constructor function runs during contract deployment, setting the token's name ("MyToken") and symbol ("MTK") with ERC20 constructor arguments. Additionally, it assigns the owner variable to the deploying address.
 
+**5. Transferring**
+
+Standard ERC20 transfer functionality, allowing token transfers between addresses.
+
 **Executing program**
 
 To run this program, I use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
